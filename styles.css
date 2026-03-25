@@ -100,10 +100,22 @@ body::before {
     color: var(--text-primary);
     text-decoration: none;
     font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    align-items: center;
 }
 
 .logo .accent {
     color: var(--accent);
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -183,6 +195,24 @@ body::before {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.hero-logo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    animation: fadeInScale 1s ease-out;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .hero-subtitle {
@@ -777,6 +807,14 @@ body::before {
 
     .hero-title {
         font-size: 2.5rem;
+    }
+
+    .logo-img {
+        height: 40px;
+    }
+
+    .hero-logo {
+        max-width: 100%;
     }
 
     .hero-subtitle {
